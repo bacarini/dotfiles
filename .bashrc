@@ -203,7 +203,4 @@ iconver (){
 ###############################################################################################
 # Using RVM
 ###############################################################################################
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
