@@ -5,8 +5,8 @@
 
  set laststatus=2
  set backspace=2
- set tabstop=4
- set shiftwidth=4
+ set tabstop=2
+ set shiftwidth=2
  set expandtab
  set autoindent
  set smarttab
@@ -26,6 +26,7 @@
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'tpope/vim-rails.git'
+ Bundle 'majutsushi/tagbar'
  " vim-scripts repos
  Bundle 'L9'
  Bundle 'FuzzyFinder'
@@ -38,8 +39,12 @@
 
  filetype plugin indent on     " required!
  
+ map <F8> :TagbarToggle<CR>
  map <C-n> :NERDTreeToggle<CR>
  
+ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*i,*/vendor/*,*/bin/*
+ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bin|vendor)$'
+ let g:ctrlp_show_hidden = 0
  "
  " Brief help
  " :BundleList          - list configured bundles
