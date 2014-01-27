@@ -3,6 +3,7 @@
  set nocompatible               " be iMproved
  filetype off                   " required!
 
+ :let maplocalleader = ","
  set laststatus=2
  set backspace=2
  set tabstop=2
@@ -19,23 +20,16 @@
  " required! 
  Bundle 'gmarik/vundle'
 
- " My Bundles here:
- "
- " original repos on github
  Bundle 'tpope/vim-fugitive'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'tpope/vim-rails.git'
  Bundle 'majutsushi/tagbar'
- " vim-scripts repos
  Bundle 'L9'
  Bundle 'FuzzyFinder'
- " non github repos
  Bundle 'git://git.wincent.com/command-t.git'
  Bundle 'bling/vim-airline' 
- " git repos on your local machine (ie. when working on your own plugin)
- " Bundle 'file:///Users/gmarik/path/to/plugin'
- " ...
+ Bundle 'thoughtbot/vim-rspec'
 
  filetype plugin indent on     " required!
  
