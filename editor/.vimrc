@@ -1,9 +1,9 @@
- execute pathogen#infect()
+ "execute pathogen#infect()
  set t_Co=256 
  set nocompatible               " be iMproved
  filetype off                   " required!
 
- :let maplocalleader = ","
+ let mapleader = ","
  set laststatus=2
  set backspace=2
  set tabstop=2
@@ -19,17 +19,21 @@
  " let Vundle manage Vundle
  " required! 
  Bundle 'gmarik/vundle'
-
  Bundle 'tpope/vim-fugitive'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'tpope/vim-rails.git'
- Bundle 'majutsushi/tagbar'
  Bundle 'L9'
  Bundle 'FuzzyFinder'
- Bundle 'git://git.wincent.com/command-t.git'
- Bundle 'bling/vim-airline' 
+ Bundle 'mileszs/ack.vim'
+ Bundle 'kien/ctrlp.vim'
+ Bundle 'editorconfig/editorconfig-vim'
+ Bundle 'wincent/Command-T'
+ Bundle 'bling/vim-airline'
  Bundle 'thoughtbot/vim-rspec'
+ Bundle 'scrooloose/nerdtree'
+ Bundle 'airblade/vim-gitgutter'
+ Bundle 'majutsushi/tagbar'
 
  filetype plugin indent on     " required!
  
@@ -39,7 +43,13 @@
  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*i,*/vendor/*,*/bin/*
  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bin|vendor)$'
  let g:ctrlp_show_hidden = 0
- "
+
+ " RSpec.vim mappings
+ map <Leader>t :call RunCurrentSpecFile()<CR>
+ map <Leader>s :call RunNearestSpec()<CR>
+ map <Leader>l :call RunLastSpec()<CR>
+ map <Leader>a :call RunAllSpecs()<CR>
+ 
  " Brief help
  " :BundleList          - list configured bundles
  " :BundleInstall(!)    - install(update) bundles
