@@ -1,20 +1,25 @@
- "execute pathogen#infect()
- set t_Co=256 
  set nocompatible               " be iMproved
  filetype off                   " required!
+
+ set shell=/bin/bash " fix rvm-ruby inside VIM 
 
  let mapleader = ","
  set laststatus=2
  set backspace=2
- set tabstop=2
- set shiftwidth=2
- set expandtab
  set autoindent
  set smarttab
  set number
  set ruler
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
+
+ " Softtabs, 2 spaces
+ set tabstop=2
+ set shiftwidth=2
+ set expandtab
+ 
+ " Display extra whitespace
+ set list listchars=tab:»·,trail:·
 
  " let Vundle manage Vundle
  " required! 
@@ -34,6 +39,18 @@
  Bundle 'scrooloose/nerdtree'
  Bundle 'airblade/vim-gitgutter'
  Bundle 'majutsushi/tagbar'
+ Bundle 'jnurmine/Zenburn'
+
+ " RSpec.vim mappings
+ map <Leader>t :call RunCurrentSpecFile()<CR>
+ map <Leader>s :call RunNearestSpec()<CR>
+ map <Leader>l :call RunLastSpec()<CR>
+ map <Leader>a :call RunAllSpecs()<CR>
+ 
+ " color
+ set background=light
+ colorscheme zenburn
+ set t_Co=256 
 
  filetype plugin indent on     " required!
  
@@ -43,13 +60,6 @@
  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*i,*/vendor/*,*/bin/*
  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bin|vendor)$'
  let g:ctrlp_show_hidden = 0
-
- " RSpec.vim mappings
- map <Leader>t :call RunCurrentSpecFile()<CR>
- map <Leader>s :call RunNearestSpec()<CR>
- map <Leader>l :call RunLastSpec()<CR>
- map <Leader>a :call RunAllSpecs()<CR>
- 
  " Brief help
  " :BundleList          - list configured bundles
  " :BundleInstall(!)    - install(update) bundles
