@@ -33,7 +33,6 @@ export LANG=en_US.utf8
 ###############################################################################################
 source $HOME/.bash_aliases
 
-
 ###############################################################################################
 # GIT THINGS
 ###############################################################################################
@@ -199,8 +198,12 @@ iconver (){
 	for i in `find . | egrep "\.(css|html|js)"`; do iconv -f iso-8859-1 -t utf8 $i > $i.utf; done
 	for i in `find . | grep utf`; do cp $i ${i%%.utf}; rm $i; done
 }
-
 ###############################################################################################
 # Using RVM
 ###############################################################################################
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
