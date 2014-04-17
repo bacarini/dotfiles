@@ -1,3 +1,6 @@
+ 
+ scriptencoding utf-8
+ set encoding=utf-8
  set nocompatible               " be iMproved
  filetype off                   " required!
 
@@ -10,6 +13,7 @@
  set smarttab
  set number
  set ruler
+ set relativenumber 
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 
@@ -20,7 +24,7 @@
  
  " Display extra whitespace
  set list listchars=tab:»·,trail:·
-
+ 
  " let Vundle manage Vundle
  " required! 
  Bundle 'gmarik/vundle'
@@ -48,15 +52,19 @@
  map <Leader>a :call RunAllSpecs()<CR>
  
  " color
- set background=light
+ " set background=dark
+ set t_Co=256
  colorscheme zenburn
- set t_Co=256 
+ set guifont=Inconsolata:h18:cANSI
+ syntax on
 
  filetype plugin indent on     " required!
  
  map <F8> :TagbarToggle<CR>
  map <C-n> :NERDTreeToggle<CR>
  
+ let g:NERDTreeDirArrows=0
+
  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*i,*/vendor/*,*/bin/*
  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bin|vendor)$'
  let g:ctrlp_show_hidden = 0
