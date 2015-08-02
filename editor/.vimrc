@@ -14,8 +14,8 @@
  set number
  set ruler
  set relativenumber 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
 
  " Softtabs, 2 spaces
  set tabstop=2
@@ -27,23 +27,26 @@
  
  " let Vundle manage Vundle
  " required! 
- Bundle 'gmarik/vundle'
- Bundle 'tpope/vim-fugitive'
- Bundle 'Lokaltog/vim-easymotion'
- Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- Bundle 'tpope/vim-rails.git'
- Bundle 'L9'
- Bundle 'FuzzyFinder'
- Bundle 'mileszs/ack.vim'
- Bundle 'kien/ctrlp.vim'
- Bundle 'editorconfig/editorconfig-vim'
- Bundle 'wincent/Command-T'
- Bundle 'bling/vim-airline'
- Bundle 'thoughtbot/vim-rspec'
- Bundle 'scrooloose/nerdtree'
- Bundle 'airblade/vim-gitgutter'
- Bundle 'majutsushi/tagbar'
- Bundle 'jnurmine/Zenburn'
+ Plugin 'gmarik/Vundle.vim'
+
+ Plugin 'tpope/vim-fugitive'
+ Plugin 'Lokaltog/vim-easymotion'
+ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Plugin 'tpope/vim-rails.git'
+ Plugin 'L9'
+ Plugin 'FuzzyFinder'
+ Plugin 'mileszs/ack.vim'
+ Plugin 'kien/ctrlp.vim'
+ Plugin 'editorconfig/editorconfig-vim'
+ Plugin 'wincent/Command-T'
+ Plugin 'bling/vim-airline'
+ Plugin 'thoughtbot/vim-rspec'
+ Plugin 'scrooloose/nerdtree'
+ Plugin 'airblade/vim-gitgutter'
+ Plugin 'majutsushi/tagbar'
+ Plugin 'jnurmine/Zenburn'
+ Plugin 'scrooloose/nerdcommenter'
+ call vundle#end()
 
  " RSpec.vim mappings
  map <Leader>t :call RunCurrentSpecFile()<CR>
