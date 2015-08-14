@@ -6,6 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
+export EDITOR=vim
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -72,3 +73,4 @@ export PATH="/Users/brunobacarini/.rvm/gems/ruby-2.0.0-p451/bin:/Users/brunobaca
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+export LANG=pt_BR.UTF-8
