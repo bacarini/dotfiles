@@ -45,6 +45,7 @@
  Plugin 'majutsushi/tagbar'
  Plugin 'jnurmine/Zenburn'
  Plugin 'scrooloose/nerdcommenter'
+ Plugin 'elixir-lang/vim-elixir'
  call vundle#end()
 
  " RSpec.vim mappings
