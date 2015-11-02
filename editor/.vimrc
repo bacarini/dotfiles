@@ -4,6 +4,7 @@
  filetype off                   " required!
 
  set shell=/bin/bash " fix rvm-ruby inside VIM
+ " set shell=/bin/zsh " fix rvm-ruby inside VIM
 
  let mapleader = ","
  set laststatus=2
@@ -13,6 +14,8 @@
  set number
  set ruler
  set relativenumber
+ set mouse=a
+ set cursorline cursorcolumn
  set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
 
@@ -67,6 +70,8 @@
  map <C-n> :NERDTreeToggle<CR>
 
  let g:NERDTreeDirArrows=0
+ let g:NERDChristmasTree=1
+ let g:NERDTreeMinimalUI=1
 
  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*i,*/vendor/*,*/bin/*
  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bin|vendor)$'
