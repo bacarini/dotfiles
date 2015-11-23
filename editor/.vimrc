@@ -33,19 +33,15 @@
 
  Plugin 'tpope/vim-fugitive'
  Plugin 'Lokaltog/vim-easymotion'
- Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
- Plugin 'tpope/vim-rails.git'
  Plugin 'L9'
  Plugin 'FuzzyFinder'
  Plugin 'mileszs/ack.vim'
  Plugin 'kien/ctrlp.vim'
  Plugin 'editorconfig/editorconfig-vim'
- Plugin 'wincent/Command-T'
  Plugin 'bling/vim-airline'
  Plugin 'thoughtbot/vim-rspec'
  Plugin 'scrooloose/nerdtree'
  Plugin 'airblade/vim-gitgutter'
- Plugin 'majutsushi/tagbar'
  Plugin 'jnurmine/Zenburn'
  Plugin 'scrooloose/nerdcommenter'
  Plugin 'elixir-lang/vim-elixir'
@@ -70,7 +66,6 @@
  " RSpec.vim mappings
  map <Leader>t :call RunCurrentSpecFile()<CR>
  map <Leader>s :call RunNearestSpec()<CR>
- map <Leader>l :call RunLastSpec()<CR>
  map <Leader>a :call RunAllSpecs()<CR>
 
  " color
@@ -82,7 +77,6 @@
 
  filetype plugin indent on     " required!
 
- map <F8> :TagbarToggle<CR>
  map <C-n> :NERDTreeToggle<CR>
 
  let g:NERDTreeDirArrows=0
