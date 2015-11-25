@@ -45,6 +45,7 @@
  Plugin 'jnurmine/Zenburn'
  Plugin 'scrooloose/nerdcommenter'
  Plugin 'elixir-lang/vim-elixir'
+ Plugin 'tpope/vim-rails.git'
  call vundle#end()
 
  " Buffers
