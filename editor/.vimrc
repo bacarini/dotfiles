@@ -1,5 +1,7 @@
  scriptencoding utf-8
  set encoding=utf-8
+ set hlsearch
+ set incsearch
  set nocompatible               " be iMproved
  filetype off                   " required!
 
@@ -43,9 +45,11 @@
  Plugin 'scrooloose/nerdtree'
  Plugin 'airblade/vim-gitgutter'
  Plugin 'jnurmine/Zenburn'
+" Plugin 'altercation/vim-colors-solarized'
  Plugin 'scrooloose/nerdcommenter'
  Plugin 'elixir-lang/vim-elixir'
  Plugin 'tpope/vim-rails.git'
+ Plugin 'terryma/vim-multiple-cursors'
  call vundle#end()
 
  " Buffers
@@ -69,16 +73,23 @@
  map <Leader>s :call RunNearestSpec()<CR>
  map <Leader>a :call RunAllSpecs()<CR>
 
+ " vim-multiple-cursors
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
  " color
- " set background=dark
  set t_Co=256
- colorscheme zenburn
  set guifont=Inconsolata:h18:cANSI
- syntax on
+ syntax enable
+ set background=dark
+ "colorscheme solarized
+ colorscheme zenburn
 
  filetype plugin indent on     " required!
 
- map <C-n> :NERDTreeToggle<CR>
+ map <C-a> :NERDTreeToggle<CR>
 
  let g:NERDTreeDirArrows=0
  let g:NERDChristmasTree=1
